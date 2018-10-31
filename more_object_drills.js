@@ -32,4 +32,29 @@ const barObj = ({
 
 })
 
-console.log(barObj.meals[3]);
+//console.log(barObj.meals[3]);
+
+// 4 Arrays of objects
+
+
+const staff = [{
+        name: 'Bill',
+        jobTitle: 'accounting'
+    },
+    {
+        name: 'Marty',
+        jobTitle: 'accounting'
+    },
+    {
+        name: 'Beth',
+        jobTitle: 'IT'
+    },
+    {
+        name: 'Sal',
+        jobTitle: 'engineering'
+    }];
+
+for(let i = 0; i < staff.length; i ++){
+    const employee = staff[i];
+    console.log(employee.name ,'is in', employee.jobTitle);
+}
