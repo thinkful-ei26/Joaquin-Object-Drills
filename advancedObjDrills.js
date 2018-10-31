@@ -43,4 +43,28 @@ function findById(items, idNum) {
     return items.find(n => n.id === idNum);
 }
 
-console.log(findById(data, 2));
+//console.log(findById(data, 2));
+
+//validate object keys
+const objectA = {
+  id: 2,
+  name: 'Jane Doe',
+  age: 34,
+  city: 'Chicago',
+};
+const objectB = {
+  id: 3,
+  age: 33,
+  city: 'Peoria',
+};
+
+const expectedKeys = ['id', 'name', 'age', 'city'];
+
+function validateKeys(object, expectedKeys) {
+    let srcKey = Object.keys(object);
+    console.log(srcKey);
+    return expectedKeys.every(key =>
+       srcKey.includes(key));
+       }
+
+console.log(validateKeys(objectA,expectedKeys));
