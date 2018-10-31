@@ -25,4 +25,18 @@ function updateObject(obj) {
   return obj;
 
 }
-console.log(updateObject(obj));
+//console.log(updateObject(obj));
+//Person maker
+
+function personMaker() {
+  var person = {
+    firstName: 'Paul',
+    lastName: 'Jones',
+    fullName: function(){
+     return `${this.firstName} ${this.lastName}`;
+    }
+  };
+  return person;
+}
+
+console.log(personMaker());
