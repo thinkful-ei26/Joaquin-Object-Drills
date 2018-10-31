@@ -67,4 +67,5 @@ function validateKeys(object, expectedKeys) {
        srcKey.includes(key));
        }
 
-console.log(validateKeys(objectA,expectedKeys));
+//console.log(validateKeys(objectA,expectedKeys));
+
