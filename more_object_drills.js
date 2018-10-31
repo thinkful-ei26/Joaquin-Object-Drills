@@ -21,6 +21,15 @@ const fooObj = ({
     quux: 'quux',
 })
 
-for(let key in fooObj){
-    console.log(key);
-}
+// for(let key in fooObj){
+//     console.log(key);
+// }
+
+// 3 Arrays in objects.
+
+const barObj = ({
+    meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
+
+})
+
+console.log(barObj.meals[3]);
