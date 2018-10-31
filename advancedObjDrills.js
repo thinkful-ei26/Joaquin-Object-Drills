@@ -34,4 +34,13 @@ function enrollInSummerSchool(students) {
     };
 
 
-console.log(enrollInSummerSchool(sampleStudent));
+//console.log(enrollInSummerSchool(sampleStudent));
+
+//find by id
+const data = [{id: 1, foo: 'bar'}, {id: 2, foo: 'bizz'}];
+
+function findById(items, idNum) {
+    return items.find(n => n.id === idNum);
+}
+
+console.log(findById(data, 2));
