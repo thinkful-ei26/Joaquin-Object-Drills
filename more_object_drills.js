@@ -59,7 +59,7 @@ for(let i = 0; i < staff.length; i ++){
 //    console.log(employee.name ,'is in', employee.jobTitle);
 }
 
-// properties that aren't there...
+// 5. properties that aren't there...
 
 const staff2 = [{
         name: 'Bill',
@@ -84,8 +84,31 @@ const staff2 = [{
 for(let i = 0; i < staff2.length; i ++){
     const employee = staff2[i];
     if(!employee.boss){
-        console.log(`${employee.jobTitle}, ${employee.name}, is the boss.`);
+  //      console.log(`${employee.jobTitle}, ${employee.name}, is the boss.`);
     }else{
-    console.log(`${employee.jobTitle}, ${employee.name}, reports to ${employee.boss}`);
+//    console.log(`${employee.jobTitle}, ${employee.name}, reports to ${employee.boss}`);
 }
 }
+
+
+// 6. Cracking the code
+
+function decode(str){
+const cypher = {
+    a: 2,
+    b: 3,
+    c: 4,
+    d: 5
+};
+let myArr = str.split(' '); //convert input into an array of words.
+let offset = ' ';
+return myArr.map(word =>{
+    if(cypher[word[0]]){
+        offset = cypher[word[0]] -1
+    };
+    return offset ? word[offset] : offset;
+    
+});
+}
+
+console.log(decode('craft block argon meter bells brown croon droop'));
