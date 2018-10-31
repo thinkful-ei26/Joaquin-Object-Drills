@@ -111,4 +111,7 @@ return myArr.map(word =>{
 });
 }
 
-console.log(decode('craft block argon meter bells brown croon droop'));
+//console.log(decode('craft block argon meter bells brown croon droop'));
+
+
+
