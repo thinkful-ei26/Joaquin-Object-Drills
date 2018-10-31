@@ -56,5 +56,36 @@ const staff = [{
 
 for(let i = 0; i < staff.length; i ++){
     const employee = staff[i];
-    console.log(employee.name ,'is in', employee.jobTitle);
+//    console.log(employee.name ,'is in', employee.jobTitle);
+}
+
+// properties that aren't there...
+
+const staff2 = [{
+        name: 'Bill',
+        jobTitle: 'accounting',
+        boss: 'Sal'
+    },
+    {
+        name: 'Marty',
+        jobTitle: 'accounting',
+        boss: 'Sal'
+    },
+    {
+        name: 'Beth',
+        jobTitle: 'IT',
+        boss: 'Sal'
+    },
+    {
+        name: 'Sal',
+        jobTitle: 'engineering'
+    }];
+
+for(let i = 0; i < staff2.length; i ++){
+    const employee = staff2[i];
+    if(!employee.boss){
+        console.log(`${employee.jobTitle}, ${employee.name}, is the boss.`);
+    }else{
+    console.log(`${employee.jobTitle}, ${employee.name}, reports to ${employee.boss}`);
+}
 }
