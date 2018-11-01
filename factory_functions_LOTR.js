@@ -1,9 +1,9 @@
-function createCharacter(name, nickname, race, origin, attack, defense){
+function createCharacter(name, nickname, race, origin, attack, defense, weapon){
 
     return {
-        name, nickname, race, origin, attack, defense,
+        name, nickname, race, origin, attack, defense,weapon,
         describe(){
-            console.log( `${name} is a ${race} from ${origin}.`);
+            console.log( `${name} is a ${race} from ${origin}, and has a ${weapon}.`);
         },
         evaluateFight(character){
             let x = 0, y = 0;
@@ -18,7 +18,7 @@ function createCharacter(name, nickname, race, origin, attack, defense){
     };
 }
 const characters = [
-  createCharacter('Gandalf the White', 'gandalf', 'Wizard', 'Middle Earth', 10, 6),
+  createCharacter('Gandalf the White', 'gandalf', 'Wizard', 'Middle Earth', 10, 6, 'big club'),
   createCharacter('Bilbo Baggins', 'bilbo', 'Hobbit', 'The Shire', 2, 1),
   createCharacter('Frodo Baggins', 'frodo', 'Hobbit', 'The Shire', 3, 2),
   createCharacter('Aragorn son of Arathorn', 'aragorn', 'Man', 'Dunedain', 6, 8),
@@ -33,6 +33,5 @@ const hobitOnly = characters.filter(item => item.race === 'Hobbit');
 //console.log(hobitOnly);
 
 const attackOnly = characters.filter(item => item.attack > 5);
-//console.log(attackOnly);
 
-//add weapons property...
+characters.forEach(obj => console.log(obj));
